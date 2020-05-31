@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d37ff98cc3fa87baf70427f1efaae9fd41aad21ee10a9545ba545f8b1707375f
+
+name:           matrix
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Jamie-Rodriguez/matrix#readme>
+homepage:       https://github.com/Jamie-Rodriguez/matrix#readme
+bug-reports:    https://github.com/Jamie-Rodriguez/matrix/issues
+author:         Jamie Rodriguez
+copyright:      2020 Jamie Rodriguez
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Jamie-Rodriguez/matrix
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_matrix
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite matrix-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_matrix
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , matrix
+  default-language: Haskell2010
